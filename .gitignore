@@ -1,0 +1,8 @@
+/.vs
+StripeTest/bin
+StripeTest/obj
+StripeTest/App/node_modules
+StripeTest/App/package-lock.json
+
+
+
