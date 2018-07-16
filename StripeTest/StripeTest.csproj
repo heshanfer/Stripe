@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44380</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -235,6 +235,10 @@
     </Content>
     <None Include="Properties\PublishProfiles\diamot-stripetest - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\diamot-stripetest - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\diamot-stripetest2 - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\diamot-stripetest2 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\diamot-stripetest2 - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\diamot-stripetest2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

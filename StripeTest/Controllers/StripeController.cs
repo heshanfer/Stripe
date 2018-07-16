@@ -17,6 +17,8 @@ namespace StripeTest.Controllers
         // GET: Stripe
         public async System.Threading.Tasks.Task<ActionResult> Index()
         {
+
+
             var CLIENT_ID = "";
             var API_KEY = "";
             var TOKEN_URI = "https://connect.stripe.com/oauth/token";
@@ -56,8 +58,8 @@ namespace StripeTest.Controllers
 
         /*      public async System.Threading.Tasks.Task<ActionResult> Connect<ActionResult>(string code)
               {
-                  var CLIENT_ID = "ca_D1d3N5fNh9cPUH1uw46caErCpGrh6La4";
-                  var API_KEY = "sk_test_Z8x4M7wWPiv3rJcfQQ83Xfai";
+                  var CLIENT_ID = "";
+                  var API_KEY = "";
                   var TOKEN_URI = "https://connect.stripe.com/oauth/token";
                   var AUTHORIZE_URI = "https://connect.stripe.com/oauth/authorize";
 
@@ -94,8 +96,10 @@ namespace StripeTest.Controllers
 
         public string StripeConnect(string code)
         {
-            var CLIENT_ID = "ca_D1d3N5fNh9cPUH1uw46caErCpGrh6La4";
-            var API_KEY = "sk_test_Z8x4M7wWPiv3rJcfQQ83Xfai";
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
+            var CLIENT_ID = "";
+            var API_KEY = "";
             var TOKEN_URI = "https://connect.stripe.com/oauth/token";
             var AUTHORIZE_URI = "https://connect.stripe.com/oauth/authorize";
 
@@ -110,7 +114,7 @@ namespace StripeTest.Controllers
                 wc.QueryString.Add("client_secret", API_KEY);
                 wc.QueryString.Add("code", code);
                 wc.QueryString.Add("grant_type", "authorization_code");
-                wc.QueryString.Add("client_id", CLIENT_ID);
+                //.QueryString.Add("client_id", CLIENT_ID);
 
                 var request_data = wc.UploadValues(TOKEN_URI, "POST", wc.QueryString);
                 var responseString = UnicodeEncoding.UTF8.GetString(request_data);
@@ -125,8 +129,9 @@ namespace StripeTest.Controllers
 
         public ActionResult Connect(string code)
         {
-            var responseString = JsonConvert.DeserializeObject(StripeConnect(code));
-            return Content(responseString.ToString(), "application/json");
+            //var responseString = JsonConvert.DeserializeObject(StripeConnect(code));
+            // return Content(responseString.ToString(), "application/json");
+            return Content(StripeConnect(code), "application/json");
         }
 
 

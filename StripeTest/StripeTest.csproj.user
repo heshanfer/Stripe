@@ -10,7 +10,8 @@
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <ProjectView>ShowAllFiles</ProjectView>
-    <NameOfLastUsedPublishProfile>diamot-stripetest - Web Deploy</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>diamot-stripetest2 - Web Deploy %282%29</NameOfLastUsedPublishProfile>
+    <IISExpressSSLPort>44380</IISExpressSSLPort>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
